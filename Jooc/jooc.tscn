@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://figura.tscn" type="PackedScene" id=1]
 [ext_resource path="res://terra.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://fons.png" type="Texture" id=4]
 [ext_resource path="res://quadrat.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Trianglee.tscn" type="PackedScene" id=6]
+[ext_resource path="res://plataformes.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D"]
 
@@ -20,14 +21,50 @@ scale = Vector2( 1.12229, 1.125 )
 texture = ExtResource( 4 )
 
 [node name="figura" parent="." instance=ExtResource( 1 )]
-position = Vector2( 18, 779 )
+position = Vector2( 100, 779 )
 script = ExtResource( 3 )
 
 [node name="terra" parent="." instance=ExtResource( 2 )]
 position = Vector2( -21, 800 )
 
 [node name="quadrat" parent="." instance=ExtResource( 5 )]
-position = Vector2( 313, 785 )
+position = Vector2( 298, 772 )
 
 [node name="Triangles" parent="." instance=ExtResource( 6 )]
-position = Vector2( 260, 718 )
+position = Vector2( 244, 738 )
+
+[node name="Triangles2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 631, 738 )
+
+[node name="Triangles3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 580, 738 )
+
+[node name="Triangles4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 530, 738 )
+
+[node name="Triangles5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 345, 740 )
+
+[node name="Triangles6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 294, 739 )
+
+[node name="Triangles7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1421, 738 )
+
+[node name="Triangles8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1369, 738 )
+
+[node name="Triangles9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1318, 738 )
+
+[node name="Triangles10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1267, 738 )
+
+[node name="plataformes" parent="." instance=ExtResource( 7 )]
+position = Vector2( 901, 710 )
+
+[node name="plataformes2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1125, 711 )
+
+[node name="plataformes3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1126, 622 )

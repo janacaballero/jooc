@@ -6,9 +6,9 @@
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( 75, 9 )
-polygon = PoolVector2Array( 46, -4, 83, 69, 15, 72 )
+polygon = PoolVector2Array( 36, -2, 61, 52, 10, 52 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 121.75, 41.5 )
-scale = Vector2( 0.129444, 0.148333 )
+position = Vector2( 110.25, 31.5 )
+scale = Vector2( 0.103889, 0.115 )
 texture = ExtResource( 1 )
