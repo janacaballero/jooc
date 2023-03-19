@@ -1,70 +1,1068 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://figura.tscn" type="PackedScene" id=1]
 [ext_resource path="res://terra.tscn" type="PackedScene" id=2]
 [ext_resource path="res://figura.gd" type="Script" id=3]
-[ext_resource path="res://fons.png" type="Texture" id=4]
-[ext_resource path="res://quadrat.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Trianglee.tscn" type="PackedScene" id=6]
-[ext_resource path="res://plataformes.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Background.tscn" type="PackedScene" id=4]
+[ext_resource path="res://triangle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://torres.tscn" type="PackedScene" id=6]
+[ext_resource path="res://tri peque.tscn" type="PackedScene" id=7]
+[ext_resource path="res://tri peque.gd" type="Script" id=8]
+[ext_resource path="res://plat.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Plat gran.tscn" type="PackedScene" id=10]
+[ext_resource path="res://plat pet.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Nice Sugar.ttf" type="DynamicFontData" id=14]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 646, 81.5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = ExtResource( 14 )
 
 [node name="Node2D" type="Node2D"]
 
-[node name="fons" type="Sprite" parent="."]
-position = Vector2( 747.75, 416.5 )
-scale = Vector2( 1.12229, 1.125 )
-texture = ExtResource( 4 )
-
-[node name="fons2" type="Sprite" parent="."]
-position = Vector2( 2245, 416 )
-scale = Vector2( 1.12229, 1.125 )
-texture = ExtResource( 4 )
-
-[node name="figura" parent="." instance=ExtResource( 1 )]
-position = Vector2( 100, 779 )
+[node name="figura" parent="." groups=["figura"] instance=ExtResource( 1 )]
+position = Vector2( -707, 147 )
 script = ExtResource( 3 )
 
+[node name="Camera2D2" type="Camera2D" parent="figura"]
+position = Vector2( 526, 63 )
+current = true
+zoom = Vector2( 1.212, 1.5 )
+limit_top = -470
+limit_bottom = 450
+
+[node name="fons" parent="." instance=ExtResource( 4 )]
+
 [node name="terra" parent="." instance=ExtResource( 2 )]
-position = Vector2( -21, 800 )
+position = Vector2( -811, 431 )
 
-[node name="quadrat" parent="." instance=ExtResource( 5 )]
-position = Vector2( 298, 772 )
+[node name="triangle" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2299, 387 )
 
-[node name="Triangles" parent="." instance=ExtResource( 6 )]
-position = Vector2( 244, 738 )
+[node name="triangle2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1580, 387 )
 
-[node name="Triangles2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 631, 738 )
+[node name="triangle3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1034, 387 )
 
-[node name="Triangles3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 580, 738 )
+[node name="triangle4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2242, 387 )
 
-[node name="Triangles4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 530, 738 )
+[node name="triangle5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3884, 387 )
 
-[node name="Triangles5" parent="." instance=ExtResource( 6 )]
-position = Vector2( 345, 740 )
+[node name="triangle6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3826, 387 )
 
-[node name="Triangles6" parent="." instance=ExtResource( 6 )]
-position = Vector2( 294, 739 )
+[node name="triangle7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4000, 387 )
 
-[node name="Triangles7" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1421, 738 )
+[node name="triangle8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3942, 387 )
 
-[node name="Triangles8" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1369, 738 )
+[node name="triangle9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4115, 387 )
 
-[node name="Triangles9" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1318, 738 )
+[node name="triangle10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4057, 387 )
 
-[node name="Triangles10" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1267, 738 )
+[node name="triangle11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3768, 387 )
 
-[node name="plataformes" parent="." instance=ExtResource( 7 )]
-position = Vector2( 901, 710 )
+[node name="triangle12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3710, 387 )
 
-[node name="plataformes2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1125, 711 )
+[node name="torres" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1762, 368 )
 
-[node name="plataformes3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1126, 622 )
+[node name="torres2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2291, 237 )
+
+[node name="torres3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2028, 291 )
+
+[node name="tri peque" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2067, 250 )
+script = ExtResource( 8 )
+
+[node name="tri peque2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2935, 250 )
+script = ExtResource( 8 )
+
+[node name="tri peque3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2970, 250 )
+script = ExtResource( 8 )
+
+[node name="tri peque4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3004, 250 )
+script = ExtResource( 8 )
+
+[node name="tri peque5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3039, 250 )
+script = ExtResource( 8 )
+
+[node name="tri peque6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3074, 250 )
+script = ExtResource( 8 )
+
+[node name="tri peque7" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3110, 250 )
+script = ExtResource( 8 )
+
+[node name="tri peque18" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7241, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque19" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7276, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque20" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7310, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque21" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7345, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque22" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7380, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque23" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7415, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque24" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7450, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque25" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7483, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque26" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7518, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque27" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7552, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque28" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7587, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque29" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7622, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque30" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7658, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque31" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7692, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque32" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7726, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque33" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7761, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque34" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7795, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque35" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7830, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque36" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7865, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque37" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7900, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque38" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7935, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque39" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7970, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque40" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8006, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque41" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8039, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque42" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8074, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque43" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8108, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque48" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8143, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque49" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8179, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque50" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8214, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque51" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8250, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque52" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8285, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque53" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8320, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque54" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8354, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque55" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8389, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque56" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8424, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque57" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8458, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque58" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8493, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque59" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8527, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque60" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8562, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque61" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8597, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque62" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8632, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque63" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8666, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque64" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8700, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque65" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8735, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque66" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8769, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque67" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8804, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque68" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8839, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque69" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8874, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque70" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8909, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque71" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8942, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque72" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8977, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque73" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9011, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque74" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9046, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque75" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9081, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque76" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9117, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque77" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9151, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque78" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9185, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque79" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9220, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque80" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9254, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque81" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9289, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque82" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9324, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque83" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9359, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque84" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9394, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque85" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9429, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque86" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9465, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque87" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9498, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque88" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9533, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque89" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9567, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque90" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9602, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque91" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9638, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque92" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9673, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque93" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9709, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque94" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9744, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque95" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9779, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque96" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9813, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque97" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9848, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque98" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9883, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque99" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9917, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque100" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9952, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque101" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9986, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque102" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10021, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque103" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10056, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque104" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10091, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque105" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10125, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque106" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10159, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque107" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10193, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque108" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10228, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque109" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10263, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque110" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10297, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque111" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10332, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque112" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10366, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque113" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10401, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque114" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10436, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque115" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10471, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque116" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10505, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque117" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10541, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque118" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10575, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque119" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10610, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque120" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10645, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque121" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10679, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque122" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10714, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque123" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10748, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque124" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10783, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque125" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10818, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque126" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10853, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque127" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10887, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque128" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10922, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque129" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10956, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque130" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10987, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque131" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11025, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque132" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11060, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque133" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11095, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque134" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11130, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque136" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11203, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque137" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11237, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque138" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11272, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque139" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11307, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque140" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11342, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque143" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11429, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque144" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11464, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque145" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11499, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque146" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11534, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque147" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11568, 249 )
+script = ExtResource( 8 )
+
+[node name="tri peque148" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11622, 248 )
+script = ExtResource( 8 )
+
+[node name="tri peque149" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11656, 248 )
+script = ExtResource( 8 )
+
+[node name="tri peque150" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11691, 248 )
+script = ExtResource( 8 )
+
+[node name="tri peque151" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11726, 248 )
+script = ExtResource( 8 )
+
+[node name="tri peque153" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11817, 248 )
+script = ExtResource( 8 )
+
+[node name="tri peque154" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11852, 248 )
+script = ExtResource( 8 )
+
+[node name="tri peque155" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11887, 248 )
+script = ExtResource( 8 )
+
+[node name="tri peque9" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3235, 250 )
+script = ExtResource( 8 )
+
+[node name="tri peque10" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3270, 250 )
+script = ExtResource( 8 )
+
+[node name="tri peque11" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3304, 250 )
+script = ExtResource( 8 )
+
+[node name="tri peque12" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3339, 250 )
+script = ExtResource( 8 )
+
+[node name="tri peque13" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3374, 250 )
+script = ExtResource( 8 )
+
+[node name="tri peque15" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3200, 250 )
+script = ExtResource( 8 )
+
+[node name="tri peque16" parent="." instance=ExtResource( 7 )]
+position = Vector2( 5589, 170 )
+script = ExtResource( 8 )
+
+[node name="tri peque17" parent="." instance=ExtResource( 7 )]
+position = Vector2( 5839, 168 )
+script = ExtResource( 8 )
+
+[node name="tri peque44" parent="." instance=ExtResource( 7 )]
+position = Vector2( 5872, 106 )
+script = ExtResource( 8 )
+
+[node name="tri peque45" parent="." instance=ExtResource( 7 )]
+position = Vector2( 5905, 106 )
+script = ExtResource( 8 )
+
+[node name="tri peque46" parent="." instance=ExtResource( 7 )]
+position = Vector2( 5938, 106 )
+script = ExtResource( 8 )
+
+[node name="tri peque47" parent="." instance=ExtResource( 7 )]
+position = Vector2( 5971, 106 )
+script = ExtResource( 8 )
+
+[node name="plataformas" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3175, 305 )
+
+[node name="plataformas2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3290, 305 )
+
+[node name="triangle13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6049, 303 )
+
+[node name="triangle14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5991, 303 )
+
+[node name="triangle15" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6165, 303 )
+
+[node name="triangle16" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6107, 303 )
+
+[node name="triangle17" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6222, 303 )
+
+[node name="triangle20" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7724, 262 )
+
+[node name="triangle21" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8127, 183 )
+
+[node name="triangle22" parent="." instance=ExtResource( 5 )]
+position = Vector2( 9146, -397 )
+
+[node name="triangle31" parent="." instance=ExtResource( 5 )]
+position = Vector2( 9625, -67 )
+
+[node name="triangle34" parent="." instance=ExtResource( 5 )]
+position = Vector2( 10083, -63 )
+
+[node name="triangle32" parent="." instance=ExtResource( 5 )]
+position = Vector2( 9685, -65 )
+
+[node name="triangle33" parent="." instance=ExtResource( 5 )]
+position = Vector2( 9656, -127 )
+
+[node name="triangle25" parent="." instance=ExtResource( 5 )]
+position = Vector2( 12015, 386 )
+
+[node name="triangle26" parent="." instance=ExtResource( 5 )]
+position = Vector2( 12275, 386 )
+
+[node name="triangle27" parent="." instance=ExtResource( 5 )]
+position = Vector2( 12332, 386 )
+
+[node name="triangle28" parent="." instance=ExtResource( 5 )]
+position = Vector2( 12640, 386 )
+
+[node name="triangle30" parent="." instance=ExtResource( 5 )]
+position = Vector2( 12755, 386 )
+
+[node name="triangle29" parent="." instance=ExtResource( 5 )]
+position = Vector2( 12697, 386 )
+
+[node name="triangle23" parent="." instance=ExtResource( 5 )]
+position = Vector2( 10083, -24 )
+rotation = 3.14159
+
+[node name="triangle24" parent="." instance=ExtResource( 5 )]
+position = Vector2( 10277, 76 )
+rotation = 3.14159
+
+[node name="triangle18" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5933, 303 )
+
+[node name="triangle19" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5877, 303 )
+
+[node name="plataformas3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 5348, 223 )
+
+[node name="plataformas4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 5463, 223 )
+
+[node name="Plat gran" parent="." instance=ExtResource( 10 )]
+position = Vector2( 4059, 349 )
+
+[node name="Plat gran2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 4755, 287 )
+
+[node name="Plat gran3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 4886, 349 )
+
+[node name="Plat gran7" parent="." instance=ExtResource( 10 )]
+position = Vector2( 5298, 349 )
+
+[node name="Plat gran8" parent="." instance=ExtResource( 10 )]
+position = Vector2( 5709, 349 )
+
+[node name="Plat gran4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 4471, 349 )
+
+[node name="Plat gran5" parent="." instance=ExtResource( 10 )]
+position = Vector2( 4059, 286 )
+
+[node name="Plat gran6" parent="." instance=ExtResource( 10 )]
+position = Vector2( 5709, 277 )
+
+[node name="Plat gran9" parent="." instance=ExtResource( 10 )]
+position = Vector2( 5709, 207 )
+
+[node name="Plat gran10" parent="." instance=ExtResource( 10 )]
+position = Vector2( 5709, 144 )
+
+[node name="plat pet" parent="." instance=ExtResource( 11 )]
+position = Vector2( 6186, 65 )
+
+[node name="plat pet4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 6630, 369 )
+
+[node name="plat pet7" parent="." instance=ExtResource( 11 )]
+position = Vector2( 6971, 305 )
+
+[node name="plat pet8" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7014, 305 )
+
+[node name="plat pet11" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7057, 305 )
+
+[node name="plat pet12" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7100, 305 )
+
+[node name="plat pet13" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7142, 305 )
+
+[node name="plat pet9" parent="." instance=ExtResource( 11 )]
+position = Vector2( 6928, 305 )
+
+[node name="plat pet10" parent="." instance=ExtResource( 11 )]
+position = Vector2( 6885, 305 )
+
+[node name="plat pet14" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7375, 228 )
+
+[node name="plat pet15" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7418, 228 )
+
+[node name="plat pet16" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7461, 228 )
+
+[node name="plat pet17" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7504, 228 )
+
+[node name="plat pet18" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7546, 228 )
+
+[node name="plat pet19" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7332, 228 )
+
+[node name="plat pet20" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7289, 228 )
+
+[node name="plat pet21" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7719, 133 )
+
+[node name="plat pet22" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7676, 133 )
+
+[node name="plat pet23" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7936, 25 )
+
+[node name="plat pet24" parent="." instance=ExtResource( 11 )]
+position = Vector2( 7895, 25 )
+
+[node name="plat pet25" parent="." instance=ExtResource( 11 )]
+position = Vector2( 8161, -74 )
+
+[node name="plat pet26" parent="." instance=ExtResource( 11 )]
+position = Vector2( 8120, -74 )
+
+[node name="plat pet27" parent="." instance=ExtResource( 11 )]
+position = Vector2( 8394, -189 )
+
+[node name="plat pet28" parent="." instance=ExtResource( 11 )]
+position = Vector2( 8358, -189 )
+
+[node name="plat pet29" parent="." instance=ExtResource( 11 )]
+position = Vector2( 8576, -354 )
+
+[node name="plat pet30" parent="." instance=ExtResource( 11 )]
+position = Vector2( 8535, -354 )
+
+[node name="plat pet5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 6495, 277 )
+
+[node name="plat pet6" parent="." instance=ExtResource( 11 )]
+position = Vector2( 6355, 173 )
+
+[node name="torres4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 10812, 231 )
+
+[node name="torres5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 10036, 208 )
+
+[node name="torres6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 10257, 114 )
+
+[node name="torres7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 10486, 35 )
+
+[node name="torres9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 10626, -508 )
+
+[node name="torres10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 10820, -408 )
+
+[node name="torres8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 10642, 131 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 12755, 386 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -3594, -322 )
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+margin_left = -4236.0
+margin_top = -406.0
+margin_right = -2940.0
+margin_bottom = -247.0
+color = Color( 0.054902, 0.392157, 0.521569, 1 )
+
+[node name="Label" type="Label" parent="StaticBody2D"]
+margin_left = -248.0
+margin_top = -151.0
+margin_right = 1227.0
+margin_bottom = -53.0
+custom_colors/font_color = Color( 0.941176, 0.0705882, 0.717647, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Felicitats, has completat el nivell!!!!"
+
+[connection signal="body_entered" from="tri peque" to="tri peque" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque2" to="tri peque2" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque3" to="tri peque3" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque4" to="tri peque4" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque5" to="tri peque5" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque6" to="tri peque6" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque7" to="tri peque7" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque18" to="tri peque18" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque19" to="tri peque19" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque20" to="tri peque20" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque21" to="tri peque21" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque22" to="tri peque22" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque23" to="tri peque23" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque24" to="tri peque24" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque25" to="tri peque25" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque26" to="tri peque26" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque27" to="tri peque27" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque28" to="tri peque28" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque29" to="tri peque29" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque30" to="tri peque30" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque31" to="tri peque31" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque32" to="tri peque32" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque33" to="tri peque33" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque34" to="tri peque34" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque35" to="tri peque35" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque36" to="tri peque36" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque37" to="tri peque37" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque38" to="tri peque38" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque39" to="tri peque39" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque40" to="tri peque40" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque41" to="tri peque41" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque42" to="tri peque42" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque43" to="tri peque43" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque48" to="tri peque48" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque49" to="tri peque49" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque50" to="tri peque50" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque51" to="tri peque51" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque52" to="tri peque52" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque53" to="tri peque53" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque54" to="tri peque54" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque55" to="tri peque55" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque56" to="tri peque56" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque57" to="tri peque57" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque58" to="tri peque58" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque59" to="tri peque59" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque60" to="tri peque60" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque61" to="tri peque61" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque62" to="tri peque62" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque63" to="tri peque63" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque64" to="tri peque64" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque65" to="tri peque65" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque66" to="tri peque66" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque67" to="tri peque67" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque68" to="tri peque68" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque69" to="tri peque69" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque70" to="tri peque70" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque71" to="tri peque71" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque72" to="tri peque72" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque73" to="tri peque73" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque74" to="tri peque74" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque75" to="tri peque75" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque76" to="tri peque76" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque77" to="tri peque77" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque78" to="tri peque78" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque79" to="tri peque79" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque80" to="tri peque80" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque81" to="tri peque81" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque82" to="tri peque82" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque83" to="tri peque83" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque84" to="tri peque84" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque85" to="tri peque85" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque86" to="tri peque86" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque87" to="tri peque87" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque88" to="tri peque88" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque89" to="tri peque89" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque90" to="tri peque90" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque91" to="tri peque91" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque92" to="tri peque92" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque93" to="tri peque93" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque94" to="tri peque94" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque95" to="tri peque95" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque96" to="tri peque96" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque97" to="tri peque97" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque98" to="tri peque98" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque99" to="tri peque99" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque100" to="tri peque100" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque101" to="tri peque101" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque102" to="tri peque102" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque103" to="tri peque103" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque104" to="tri peque104" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque105" to="tri peque105" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque106" to="tri peque106" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque107" to="tri peque107" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque108" to="tri peque108" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque109" to="tri peque109" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque110" to="tri peque110" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque111" to="tri peque111" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque112" to="tri peque112" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque113" to="tri peque113" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque114" to="tri peque114" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque115" to="tri peque115" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque116" to="tri peque116" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque117" to="tri peque117" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque118" to="tri peque118" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque119" to="tri peque119" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque120" to="tri peque120" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque121" to="tri peque121" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque122" to="tri peque122" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque123" to="tri peque123" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque124" to="tri peque124" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque125" to="tri peque125" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque126" to="tri peque126" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque127" to="tri peque127" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque128" to="tri peque128" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque129" to="tri peque129" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque130" to="tri peque130" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque131" to="tri peque131" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque132" to="tri peque132" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque133" to="tri peque133" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque134" to="tri peque134" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque136" to="tri peque136" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque137" to="tri peque137" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque138" to="tri peque138" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque139" to="tri peque139" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque140" to="tri peque140" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque143" to="tri peque143" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque144" to="tri peque144" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque145" to="tri peque145" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque146" to="tri peque146" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque147" to="tri peque147" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque148" to="tri peque148" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque149" to="tri peque149" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque150" to="tri peque150" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque151" to="tri peque151" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque153" to="tri peque153" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque154" to="tri peque154" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque155" to="tri peque155" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque9" to="tri peque9" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque10" to="tri peque10" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque11" to="tri peque11" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque12" to="tri peque12" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque13" to="tri peque13" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque15" to="tri peque15" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque16" to="tri peque16" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque17" to="tri peque17" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque44" to="tri peque44" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque45" to="tri peque45" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque46" to="tri peque46" method="_on_tri_peque_body_entered"]
+[connection signal="body_entered" from="tri peque47" to="tri peque47" method="_on_tri_peque_body_entered"]

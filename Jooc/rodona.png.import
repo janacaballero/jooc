@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/trr.png-ceb6643ef10244e1e41c8f49c13e9fb9.stex"
+path="res://.import/rodona.png-7200f59550eecb55d5d0005e5bfa5a2c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://trr.png"
-dest_files=[ "res://.import/trr.png-ceb6643ef10244e1e41c8f49c13e9fb9.stex" ]
+source_file="res://rodona.png"
+dest_files=[ "res://.import/rodona.png-7200f59550eecb55d5d0005e5bfa5a2c.stex" ]
 
 [params]
 

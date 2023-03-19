@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/triangle.jpg-ce4bc4dae0c1034562938c14803c685d.stex"
+path="res://.import/Nice Sugar.jpg-289c270e7b058c34857b717609d9fe03.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://triangle.jpg"
-dest_files=[ "res://.import/triangle.jpg-ce4bc4dae0c1034562938c14803c685d.stex" ]
+source_file="res://Nice Sugar.jpg"
+dest_files=[ "res://.import/Nice Sugar.jpg-289c270e7b058c34857b717609d9fe03.stex" ]
 
 [params]
 

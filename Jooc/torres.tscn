@@ -1,15 +1,15 @@
 [gd_scene load_steps=2 format=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7203.5, 327.75 )
+extents = Vector2( 27, 219.5 )
 
 [node name="StaticBody2D" type="StaticBody2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 14449.0
-margin_bottom = 640.0
-color = Color( 0.0470588, 0.168627, 0.94902, 1 )
+margin_right = 53.0
+margin_bottom = 437.0
+color = Color( 0.0156863, 0.027451, 0.27451, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 7244, 323.75 )
+position = Vector2( 26, 218.5 )
 shape = SubResource( 1 )
